@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    /*background-color: black;*/
+    background-image: linear-gradient(to top left, #111111, #000000);
+    color: white;
+}
+#app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+header {
+    padding: 2vh;
+}
+h1, h2 {
+    margin: 0.5vh;
+}
+h1 {
+    font-size: 4vh;
+}
+h2 {
+    font-size: 2vh;
+}
+main {
+    padding: 0 2vh 0 2vh;
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.tile {
+    background-image: linear-gradient(to top right, #4c4c4c, black);
+    padding: 1vw;
+    margin: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.header, .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.value {
+    font-size: 8vh;
+    text-shadow: white 0 0 1vh;
+}
+.id, button > .value, .unit, .label {
+    font-size: 1.5vh;
+}
+.single .value {
+    display: flex;
+    justify-content: center;
+}
+.multi {
+    justify-content: center;
+}
+.multi .value {
+    font-size: 4vh;
+}
+footer {
+    padding: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.button-bar {
+    display: flex;
+    /*align-content: stretch;*/
+    justify-content: space-between;
+    margin-bottom: 1vh;
+}
+button {
+    flex-grow: 1;
+    background-color: white;
+    border: none;
+}
+button > .name {
+    font-size: 1vh;
+}
+button > .value {
+    text-shadow: none;
+}
+button.selected {
+    background-color: #4dd9e5;
+}
+/* Chrome doesn't like this selector being in comma separated list */
+.slider::-webkit-slider-thumb {
+    background-color: #4dd9e5;
+}
+.slider::-moz-range-thumb {
+    background-color: #4dd9e5;
+}
+.slider-widget {
+    display: flex;
+    flex-direction: column;
+}
+.slider-widget .label {
+    display: flex;
+    justify-content: center;
+}
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 0.5vh;
+    margin: 1vh 0 1vh 0;
+    border-radius: 0.25vh;
+}
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 1.5vh;
+    height: 1.5vh;
+    border-radius: 50%;
+}
+.slider::-moz-range-thumb {
+    width: 1.5vh;
+    height: 1.5vh;
+    border-radius: 50%;
+}
+.scale {
+    display: flex;
+    justify-content: space-between;
+}
